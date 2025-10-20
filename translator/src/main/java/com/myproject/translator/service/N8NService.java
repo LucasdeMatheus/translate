@@ -25,12 +25,7 @@ public class N8NService {
                 .build();
     }
 
-    /**
-     * Chama o webhook do n8n para traduzir o texto.
-     * @param chatInput Texto do usuário
-     * @param targetLang Idioma alvo (ex: "en", "pt")
-     * @return String com o JSON retornado pelo n8n
-     */
+
     public List<TranslationDTO> translate(TranslateDTO translateDTO) {
         Map<String, Object> body = Map.of(
                 "chatInput", translateDTO.expression(),
@@ -76,11 +71,7 @@ public class N8NService {
 
 
     private final ObjectMapper objectMapper = new ObjectMapper();
-    /**
-     * Chama o webhook do n8n para gerar questões a partir de uma expressão.
-     * @param expressao Texto ou expressão para gerar questões
-     * @return String com o JSON retornado pelo n8n
-     */
+
     public TranslationDTO gerarQuestoes(Translation translation) {
         Map<String, Object> body = Map.of("expressao", translation);
 

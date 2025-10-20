@@ -67,6 +67,24 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
+			<!-- Dependência Vosk -->
+			<dependency>
+				<groupId>com.alphacephei</groupId>
+				<artifactId>vosk</artifactId>
+				<version>0.3.45</version>
+			</dependency>
+
+			<!-- Dependência JNA necessária para Vosk -->
+			<dependency>
+				<groupId>net.java.dev.jna</groupId>
+				<artifactId>jna</artifactId>
+				<version>5.7.0</version>
+			</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20240303</version>
+		</dependency>
 
 	</dependencies>
 

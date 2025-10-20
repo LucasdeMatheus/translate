@@ -2,7 +2,6 @@ package com.myproject.translator.controller;
 
 import com.myproject.translator.domain.translation.TranslateDTO;
 import com.myproject.translator.domain.translation.Translation;
-import com.myproject.translator.service.N8NService;
 import com.myproject.translator.service.TranslationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
