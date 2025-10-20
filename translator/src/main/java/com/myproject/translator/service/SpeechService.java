@@ -95,7 +95,7 @@ public class SpeechService {
         LocalDateTime endOfRequest = LocalDateTime.now();
         Duration duration = Duration.between(startOfRequest, endOfRequest);
 
-        feedback.put("timesize", duration.toMinutes() + " ms");
+        feedback.put("timesize", duration.toSeconds() + " ms");
         return feedback;
     }
 
