@@ -1,8 +1,8 @@
-package com.myproject.translator.domain.phrase;
+package com.myproject.translator.domain.dialogue;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PhraseRepository extends JpaRepository<Phrase, Long> {
+public interface DialogueRepository extends JpaRepository<Dialogue, Long> {
 }

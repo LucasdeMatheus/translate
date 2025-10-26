@@ -1,11 +1,11 @@
-package com.myproject.translator.domain.phrase;
+package com.myproject.translator.domain.dialogue;
 
 import com.myproject.translator.domain.util.Language;
 import jakarta.persistence.*;
 
 
 @Entity
-public class Phrase {
+public class Dialogue {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
