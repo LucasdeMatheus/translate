@@ -1,4 +1,5 @@
 package com.myproject.translator.domain.question;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.myproject.translator.domain.translation.Translation;
 import jakarta.persistence.*;
 import java.util.List;
@@ -23,6 +24,7 @@ public class Question {
 
     @ManyToOne
     @JoinColumn(name = "translation_id")
+    @JsonIgnore
     private Translation translation;
 
     public Question() {

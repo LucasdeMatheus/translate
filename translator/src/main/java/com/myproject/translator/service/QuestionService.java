@@ -45,15 +45,17 @@ public class QuestionService {
     }
 
     public QuestionDTO getQuestion(Long id) {
-        Question question = questionRepository.findById(id)
+        Question q = questionRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Questão não encontrada"));
 
         // Converte para DTO
         return new QuestionDTO(
-                question.getDescription(),
-                question.getAlternatives(),
-                question.getCorrectAnswer(),
-                question.getExplanation()
+                q.getId(),
+                q.getTranslation().getId(),
+                q.getDescription(),
+                q.getAlternatives(),
+                q.getCorrectAnswer(),
+                q.getExplanation()
         );
     }
 
@@ -64,6 +66,8 @@ public class QuestionService {
         // Converte cada Question em QuestionDTO
         return questions.stream()
                 .map(q -> new QuestionDTO(
+                        q.getId(),
+                        q.getTranslation().getId(),
                         q.getDescription(),
                         q.getAlternatives(),
                         q.getCorrectAnswer(),
