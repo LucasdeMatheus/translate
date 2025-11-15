@@ -1,4 +1,4 @@
-package com.myproject.translator.domain.phrase;
+package com.myproject.translator.domain.dialogue;
 
 public record AssessmentDTO(
         boolean GoodAnswer,
